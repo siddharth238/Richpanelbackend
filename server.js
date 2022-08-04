@@ -31,7 +31,7 @@ mongoose
   });
 
 app.get("/", (req, res) => {
-  res.send("<center><h1>Hello, This is backend for stripe API</h1></center>");
+  res.send("<center><h1>Roy's backend</h1></center>");
 });
 
 app.get("/getallorders/:id", (req, res) => {
@@ -39,7 +39,7 @@ app.get("/getallorders/:id", (req, res) => {
   console.log(id);
   orderModel.find({ email: id }, (error, data) => {
     if (error) {
-      res.status(404).json({ error: "data item not found!" });
+      res.status(404).json({ error: "data item not found! (client error response)" });
     } else {
       res.json(data);
     }
