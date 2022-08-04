@@ -94,4 +94,4 @@ app.post("/payments", (req, res) => {
     .catch((err) => res.status(404).json({ err }));
 });
 
-app.listen(8282, () => console.log("listening at port 8282"));
+app.listen(process.env.PORT, () => console.log("listening at port 8282"));
