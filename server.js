@@ -16,7 +16,7 @@ app.use(cors());
  
 mongoose
   .connect(
-    "mongodb+srv://admin:admin@cluster0.w4kl75w.mongodb.net/?retryWrites=true&w=majority",
+    process.env.MONGO_URL,
     {
       useNewUrlParser: true,
       useCreateIndex: true,
